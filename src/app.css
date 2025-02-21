@@ -3,6 +3,8 @@
 body {
     background-color: #111827; /* Dark background */
     color: white; /* Optional: Sets text color */
+        scroll-behavior: smooth;
+
 }
 
 
