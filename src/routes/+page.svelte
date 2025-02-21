@@ -2,11 +2,9 @@
 <script lang='ts'>
    let showMenu = false;
 
+
 </script>
 
-<body class="bg-gray-900 text-white">
-    
-</body>
 
 <!-- Header Section -->
  <section class="bg-black fixed w-full left-0 right-0 bg-opacity-80 mt-0 shadow-lg top-0 z-100 mb-5">
