@@ -139,7 +139,11 @@
  </section>
 
  <!-- ABOUT ME -->
+<<<<<<< HEAD
  <section id="about" class="p-2">
+=======
+ <section id="about" class="p-6">
+>>>>>>> centered
     <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center justify-center">
 
         <h1>About me</h1>
