@@ -1,9 +1,51 @@
 
 <script lang='ts'>
+
+import { onMount } from 'svelte';
    let showMenu = false;
 
 
+// List of songs
+
+let isPlaying: boolean = true; // Default: Sound is ON
+    let audio: HTMLAudioElement | null = null; // Explicitly typed
+    let currentSongIndex: number = 0;
+
+    // List of songs (Replace with actual paths)
+    const songs: string[] = [
+        '/yvSG60yjYQoz.128.mp3',
+        '/R2k83VTIyoPd.128.mp3',
+        '/I9xUTg6dvvUg.128.mp3'
+    ];
+
+    // Function to play the next song
+    function playNextSong() {
+        if (!audio) return;
+        currentSongIndex = (currentSongIndex + 1) % songs.length;
+        audio.src = songs[currentSongIndex];
+        if (isPlaying) audio.play();
+    }
+
+    // Toggle sound ON/OFF
+    function toggleSound() {
+        if (!audio) return;
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        isPlaying = !isPlaying;
+    }
+
+    // Initialize audio on component mount
+    onMount(() => {
+        audio = new Audio(songs[currentSongIndex]);
+        audio.play();
+        audio.addEventListener('ended', playNextSong);
+    });
 </script>
+
+
 
 
 <!-- Header Section -->
@@ -71,7 +113,7 @@
  
 
 <!-- Body -->
- <section id="home" class="mt-28 sm:mt-24">
+ <section id="home" class="mt-28 sm:mt-24 text-white">
     
 <div class="text-white font-bold rounded-full w-[350px] sm:m-12 m-4 p-4 flex gap-2 border focus-none border-gray-700">
     
@@ -139,12 +181,8 @@
  </section>
 
  <!-- ABOUT ME -->
-<<<<<<< HEAD
- <section id="about" class="p-2">
-=======
  <section id="about" class="p-6">
->>>>>>> centered
-    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center justify-center">
+    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
 
         <h1>About me</h1>
 
@@ -183,7 +221,7 @@
 
  <!-- MY FEATURED PROJECTS -->
   <section id="projects" class="">
-    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center justify-center">
+    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
 
         <h1>Featured Projects</h1>
 
@@ -425,36 +463,49 @@
             </svg>
         </div>
 
-       <p class="text-lg text-center">You can contact me using any of the social media accounts provided below</p>
+<p class="text-lg text-center">GET IN TOUCH</p>
 
-
-<div class="flex space-x-8 text-center justify-center items-center mt-8">
+<div class="flex space-x-8 text-center justify-center items-center mt-3 text-lg font-bold">
 
     <!-- email -->
-    <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
-    </a>
+    <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg px-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
+    E-mail me</a>
 
-<!-- facebook -->
-    <a href="#" class="hover:text-green-400">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"><path stroke-dasharray="24" stroke-dashoffset="24" d="M17 4l-2 0c-2.5 0 -4 1.5 -4 4v12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M8 12h7"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="8;0"/></path></g></svg>
-    </a>
-
-<!-- instagram -->
-       <a href="https://instagram.com" target="_blank" class="hover:text-green-400">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><circle cx="17" cy="7" r="1.5" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="1.3s" dur="0.15s" values="0;1"/></circle><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="72" stroke-dashoffset="72" d="M16 3c2.76 0 5 2.24 5 5v8c0 2.76 -2.24 5 -5 5h-8c-2.76 0 -5 -2.24 -5 -5v-8c0 -2.76 2.24 -5 5 -5h4Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="72;0"/></path><path stroke-dasharray="28" stroke-dashoffset="28" d="M12 8c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.6s" values="28;0"/></path></g></svg>
-       </a>
-
+<p class="text-2xl font-bold">Or</p>
 <!-- telegram -->
-       <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0"/></path></g></svg>
-       
+       <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg px-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0"/></path></g></svg>
+       DM me
        </a>
 
-<!-- whatsapp -->
-       <a href="https://whatsapp.com" target="_blank" class="hover:text-green-400">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
-       </a>
 
 </div>
 </section>
+
+
+<div class="fixed top-1/4 right-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-l-lg shadow-lg flex flex-col space-y-2">
+    <button on:click={toggleSound} class="p-4 hover:bg-gray-800 transition">
+        {#if isPlaying}
+  <!-- Sound On Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="3 9 9 9 15 3 15 21 9 15 3 15"></polygon>
+    <path d="M17 8a5 5 0 0 1 0 8"></path>
+    <path d="M19 5a9 9 0 0 1 0 14"></path>
+</svg>
+{:else}
+<!-- Sound Off Icon -->
+<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="3 9 9 9 15 3 15 21 9 15 3 15"></polygon>
+    <line x1="21" y1="9" x2="21" y2="15"></line>
+    <line x1="18" y1="12" x2="24" y2="12"></line>
+</svg>
+{/if}
+
+    </button>
+    </div>
+
+
+<audio id="audioPlayer"></audio> <!-- Hidden audio element -->
+
+   
