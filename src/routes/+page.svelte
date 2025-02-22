@@ -214,7 +214,7 @@
         
     </div>
 
-    <div class="relative w-[500px] lg:mt-0 mx-auto mt-4  group min-h-screen flex items-center">
+    <div class="relative w-[500px] lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
         {#if !showMenu}
         <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="">
     
@@ -236,7 +236,7 @@
         <h1>Featured Projects</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
-            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <circle cx="18" cy="12" r="0" fill="#78d65c">
                     <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
                 </circle>
@@ -313,7 +313,7 @@
         <h1 class="text-center">Tech Skills</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
-            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <circle cx="18" cy="12" r="0" fill="#78d65c">
                     <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
                 </circle>
@@ -341,7 +341,7 @@
         <h1 class="text-center">Services I offer</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
-            <svg class="h-8" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+            <svg class="h-8" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <circle cx="18" cy="12" r="0" fill="#78d65c">
                     <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
                 </circle>
@@ -460,7 +460,7 @@
         <h1 class="text-center">Contact Me</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
-            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 24 24">
+            <svg class="h-8 " xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                 <circle cx="18" cy="12" r="0" fill="#78d65c">
                     <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
                 </circle>
