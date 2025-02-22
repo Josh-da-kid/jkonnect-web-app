@@ -337,7 +337,7 @@
 <!-- SERVICES -->
 <section id="services">
 
-    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-8 w-full h-full">
+    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-5 w-full h-full">
         <h1 class="text-center">Services I offer</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
@@ -455,8 +455,8 @@
 </section>
 
 <!-- CONTACT ME -->
-<section id="contact">
-    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-8">
+<section id="contact" class="p-8 text-center items-center justify-center mx-auto">
+    <div class="text-4xl sm:text-5xl md:text-6xl items-center justify-center mx-auto flex">
         <h1 class="text-center">Contact Me</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
@@ -472,22 +472,31 @@
                 </circle>
             </svg>
         </div>
+        <div class="border border-green-500 shadow-lg shadow-green-500 p-4 justify-center items-center mx-auto text-center w-[480px]">
 
-<p class="text-lg text-center">GET IN TOUCH</p>
-
-<div class="sm:flex text-center justify-center items-center mt-3 text-lg font-bold">
-
-    <!-- email -->
-    <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400 text-center flex gap-2 hover:bg-gray-800 p-2 rounded-lg ">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
-    E-mail me</a>
-
-<p class="text-2xl font-bold">Or</p>
-<!-- telegram -->
-       <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0"/></path></g></svg>
-       DM me
-       </a>
+            
+            <p class="text-lg text-center">GET IN TOUCH</p>
+            
+            <div class="sm:flex mt-3 text-lg font-bold text-center items-center justify-center space-x-3">
+            
+                <!-- email -->
+                 <div class="flex">
+            
+                     <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400 text-center flex gap-2 hover:bg-gray-800 p-2 rounded-lg ">
+                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
+                     E-mail me</a>
+                 </div>
+            
+            <p class="text-lg font-light mt-1 ml-8 text-start sm:text-center">Or</p>
+            <!-- telegram -->
+             <div class="flex">
+            
+                 <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0"/></path></g></svg>
+                 DM me
+                 </a>
+             </div>
+        </div>
 
 
 </div>
@@ -516,6 +525,6 @@
     </div>
 
 
-<audio id="audioPlayer" autoplay muted></audio> <!-- Hidden audio element -->
+<audio id="audioPlayer" autoplay ></audio> <!-- Hidden audio element -->
 
    
