@@ -1,49 +1,49 @@
 
 <script lang='ts'>
 
-import { onMount } from 'svelte';
-   let showMenu = false;
-
-
-// List of songs
-
-let isPlaying: boolean = true; // Default: Sound is ON
-    let audio: HTMLAudioElement | null = null; // Explicitly typed
-    let currentSongIndex: number = 0;
-
-    // List of songs (Replace with actual paths)
-    const songs: string[] = [
-        '/yvSG60yjYQoz.128.mp3',
-        '/R2k83VTIyoPd.128.mp3',
-        '/I9xUTg6dvvUg.128.mp3'
-    ];
-
-    // Function to play the next song
-    function playNextSong() {
-        if (!audio) return;
-        currentSongIndex = (currentSongIndex + 1) % songs.length;
-        audio.src = songs[currentSongIndex];
-        if (isPlaying) audio.play();
-    }
-
-    // Toggle sound ON/OFF
-    function toggleSound() {
-        if (!audio) return;
-        if (isPlaying) {
-            audio.pause();
-        } else {
-            audio.play();
+    import { onMount } from 'svelte';
+       let showMenu = false;
+    
+    
+    // List of songs
+    
+    let isPlaying: boolean = true; // Default: Sound is ON
+        let audio: HTMLAudioElement | null = null; // Explicitly typed
+        let currentSongIndex: number = 0;
+    
+        // List of songs (Replace with actual paths)
+        const songs: string[] = [
+            '/yvSG60yjYQoz.128.mp3',
+            '/R2k83VTIyoPd.128.mp3',
+            '/I9xUTg6dvvUg.128.mp3'
+        ];
+    
+        // Function to play the next song
+        function playNextSong() {
+            if (!audio) return;
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            audio.src = songs[currentSongIndex];
+            if (isPlaying) audio.play();
         }
-        isPlaying = !isPlaying;
-    }
-
-    // Initialize audio on component mount
-    onMount(() => {
-        audio = new Audio(songs[currentSongIndex]);
-        audio.play();
-        audio.addEventListener('ended', playNextSong);
-    });
-</script>
+    
+        // Toggle sound ON/OFF
+        function toggleSound() {
+            if (!audio) return;
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+            isPlaying = !isPlaying;
+        }
+    
+        // Initialize audio on component mount
+        onMount(() => {
+            audio = new Audio(songs[currentSongIndex]);
+            audio.play();
+            audio.addEventListener('ended', playNextSong);
+        });
+    </script>
 
 
 
@@ -113,7 +113,7 @@ let isPlaying: boolean = true; // Default: Sound is ON
  
 
 <!-- Body -->
- <section id="home" class="mt-28 sm:mt-24 text-white">
+ <section id="home" class="mt-32 sm:mt-24 text-white">
     
 <div class="text-white font-bold rounded-full w-[350px] sm:m-12 m-4 p-4 flex gap-2 border focus-none border-gray-700">
     
@@ -181,7 +181,7 @@ let isPlaying: boolean = true; // Default: Sound is ON
  </section>
 
  <!-- ABOUT ME -->
- <section id="about" class="p-6">
+ <section id="about" class="p-6 place-self-center">
     <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
 
         <h1>About me</h1>
@@ -220,8 +220,8 @@ let isPlaying: boolean = true; // Default: Sound is ON
   </section>
 
  <!-- MY FEATURED PROJECTS -->
-  <section id="projects" class="">
-    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
+  <section id="projects" class="justify-center items-center place-self-center">
+    <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center justify-center">
 
         <h1>Featured Projects</h1>
 
@@ -465,16 +465,16 @@ let isPlaying: boolean = true; // Default: Sound is ON
 
 <p class="text-lg text-center">GET IN TOUCH</p>
 
-<div class="flex space-x-8 text-center justify-center items-center mt-3 text-lg font-bold">
+<div class="sm:flex text-center justify-center items-center mt-3 text-lg font-bold">
 
     <!-- email -->
-    <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg px-6">
+    <a href="mailto:carmenjosh84@gmail.com" target="_blank" class="hover:text-green-400 text-center flex gap-2 hover:bg-gray-800 p-2 rounded-lg ">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="64" stroke-dashoffset="64" d="M4 5h16c0.55 0 1 0.45 1 1v12c0 0.55 -0.45 1 -1 1h-16c-0.55 0 -1 -0.45 -1 -1v-12c0 -0.55 0.45 -1 1 -1Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="64;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M3 6.5l9 5.5l9 -5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="24;0"/></path></g></svg>
     E-mail me</a>
 
 <p class="text-2xl font-bold">Or</p>
 <!-- telegram -->
-       <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg px-6">
+       <a href="https://t.me/dipsyjosh" target="_blank" class="hover:text-green-400 flex gap-2 hover:bg-gray-800 p-2 rounded-lg">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="20" stroke-dashoffset="20" d="M21 5l-2.5 15M21 5l-12 8.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"/></path><path stroke-dasharray="24" stroke-dashoffset="24" d="M21 5l-19 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="24;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M18.5 20l-9.5 -6.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="14;0"/></path><path stroke-dasharray="10" stroke-dashoffset="10" d="M2 12.5l7 1"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.3s" values="10;0"/></path><path stroke-dasharray="8" stroke-dashoffset="8" d="M12 16l-3 3M9 13.5l0 5.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.7s" dur="0.3s" values="8;0"/></path></g></svg>
        DM me
        </a>
@@ -483,7 +483,7 @@ let isPlaying: boolean = true; // Default: Sound is ON
 </div>
 </section>
 
-
+<!-- PLAYING SONG DIV -->
 <div class="fixed top-1/4 right-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-l-lg shadow-lg flex flex-col space-y-2">
     <button on:click={toggleSound} class="p-4 hover:bg-gray-800 transition">
         {#if isPlaying}
