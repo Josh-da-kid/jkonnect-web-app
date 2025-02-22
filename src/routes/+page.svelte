@@ -337,7 +337,7 @@
 <!-- SERVICES -->
 <section id="services">
 
-    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-8">
+    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-8 w-full h-full">
         <h1 class="text-center">Services I offer</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
