@@ -354,7 +354,7 @@
             </svg>
         </div>
 
-    <div class="block p-8 lg:grid lg:grid-cols-3  space-y-4 lg:space-y-11 lg:space-x-4 text-lg">
+    <div class="block p-3 lg:grid lg:grid-cols-3  space-y-4 lg:space-y-11 lg:space-x-4 text-lg">
 
 
         <div class="border focus-none border-green-500 shadow-lg shadow-green-500 p-4">
