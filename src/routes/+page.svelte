@@ -42,7 +42,17 @@
             audio = new Audio(songs[currentSongIndex]);
             audio.play();
             audio.addEventListener('ended', playNextSong);
-        });
+
+            window.addEventListener("DOMContentLoaded", () => {
+    const audio = document.getElementById("audioPlayer") as HTMLAudioElement | null;
+    
+    if (audio) {
+        audio.play().catch(error => console.error("Autoplay blocked:", error));
+    }
+});
+
+
+        })
     </script>
 
 
@@ -204,7 +214,7 @@
         
     </div>
 
-    <div class="relative w-[500px] lg:mt-0 mx-auto mt-4  group">
+    <div class="relative w-[500px] lg:mt-0 mx-auto mt-4  group min-h-screen flex items-center">
         {#if !showMenu}
         <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="">
     
@@ -506,6 +516,6 @@
     </div>
 
 
-<audio id="audioPlayer"></audio> <!-- Hidden audio element -->
+<audio id="audioPlayer" autoplay muted></audio> <!-- Hidden audio element -->
 
    
