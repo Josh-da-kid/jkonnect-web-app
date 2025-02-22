@@ -1,13 +1,27 @@
 @import 'tailwindcss';
 html {
   @apply scroll-smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
     background-color: #111827; /* Dark background */
     color: white; /* Optional: Sets text color */
         scroll-behavior: smooth;
+        overflow-x: hidden;
 
 }
 
+svg {
+  max-width: 100%;
+  height: auto;
+}
+.fixed {
+  max-width: 100%;
+}
+
+.flex {
+  flex-wrap: wrap;
+}
 

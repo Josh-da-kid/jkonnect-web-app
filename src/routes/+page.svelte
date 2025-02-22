@@ -113,7 +113,7 @@
  
 
 <!-- Body -->
- <section id="home" class="mt-32 sm:mt-24 text-white">
+ <section id="home" class="mt-32 sm:mt-24 text-white        ">
     
 <div class="text-white font-bold rounded-full w-[350px] sm:m-12 m-4 p-4 flex gap-2 border focus-none border-gray-700">
     
