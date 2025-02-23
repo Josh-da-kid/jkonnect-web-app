@@ -134,6 +134,13 @@
     <p class="flex text-center mt-3">Welcome to my Creative Space</p>
 </div>
 
+<div class="m-4 mt-8 flex gap-2 text-center justify-center border-gray-700 hover:bg-gray-800 hover:text-green-500 cursor-pointer border p-3 rounded-full w-[200px]">
+
+<span></span>
+
+    <p >DOWNLOAD CV</p>
+</div>
+
 <div class="sm:text-5xl text-4xl md:text-6xl mt-12 ml-6 text-gray-300">
 <h1>Hi, I'm </h1>
 <span class="animate-typing"></span>
@@ -213,12 +220,12 @@
         
     </div>
 
-    <div class="relative sm:w-[500px]  w-full lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
+    <div class="relative sm:w-[500px] w-full lg:mt-0 mx-auto mt-4 group flex items-center">
         {#if !showMenu}
-        <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
+        <img class=" transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
     
         <!-- about text -->
-        <div class="absolute inset-0 justify-center p-1 sm:p-3 rounded-lg shadow-lg shadow-green-500 items-center bg-black opacity-60">
+        <div class="sm:absolute inset-0 justify-center p-1 sm:p-3 shadow-lg shadow-green-500 items-center bg-black opacity-60">
             <p class="aboutMe bg-black text-lg sm:text-xl font-bold">
                 Hey there! My name is Josiah Andrew, a passionate Full-Stack Web Developer with a keen eye for detail and a commitment to creating efficient, scalable, and user-friendly applications. Born on January 12, 2008, I have always been fascinated by technology and its ability to solve real-world problems. My journey into web development has equipped me with expertise in both frontend and backend technologies, allowing me to build seamless digital experiences. I am constantly learning and evolving, staying up to date with the latest industry trends to refine my skills. My goal is to create impactful solutions that not only meet business needs but also enhance user experiences. <br>
                 <span class="font-extrabold text-green-600 mt-3">Let’s build something incredible together!!</span>
