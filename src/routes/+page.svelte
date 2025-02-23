@@ -190,7 +190,7 @@
  </section>
 
  <!-- ABOUT ME -->
- <section id="about" class="p-3 justify-center items-center mx-auto ">
+ <section id="about" class="p-3 justify-center items-center mx-auto">
     <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
 
         <h1>About me</h1>
@@ -213,7 +213,7 @@
         
     </div>
 
-    <div class="relative sm:w-[500px] w-full lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
+    <div class="relative sm:w-[500px]  w-full lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
         {#if !showMenu}
         <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
     
