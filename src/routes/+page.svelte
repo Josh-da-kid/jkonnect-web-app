@@ -109,8 +109,7 @@
 
         <div class="mr-10 space-y-6" >
             
-              <button on:click={() => showMenu = false} > <p class="cursor-pointer ml-3 mt-32"><a class="hover:text-green-400" href="#home">Home</a></p></button>
-
+              <p class="cursor-pointer ml-3 mt-32"><a on:click={() => showMenu = false} class="hover:text-green-400" href="#home">Home</a></p>
                 <p class="cursor-pointer"><a on:click={() => showMenu = false} class="hover:text-green-400 " href="#about">About</a></p>
                 <p class="cursor-pointer"><a  on:click={() => showMenu = false} class="hover:text-green-400 " href="#projects">Projects</a></p>
                 <p class="cursor-pointer"><a  on:click={() => showMenu = false} class="hover:text-green-400 " href="#skills">Skills</a></p>
@@ -123,7 +122,7 @@
  
 
 <!-- Body -->
- <section id="home" class="mt-32 sm:mt-24 text-white        ">
+ <section id="home" class="mt-32 sm:mt-24 text-white">
     
 <div class="text-white font-bold rounded-full w-[350px] sm:m-12 m-4 p-4 flex gap-2 border focus-none border-gray-700">
     
@@ -155,28 +154,28 @@
     <div class="space-y-3">
 
         <div class="flex gap-3">
-            <span class="border w-18 h-18 p-3 rounded-full">
+            <span class="border w-11 h-11 sm:w-18 sm:h-18 p-3 rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="0 0 512 512"><path fill="currentColor" d="M477.64 38.26a4.75 4.75 0 0 0-3.55-3.66c-58.57-14.32-193.9 36.71-267.22 110a317 317 0 0 0-35.63 42.1c-22.61-2-45.22-.33-64.49 8.07C52.38 218.7 36.55 281.14 32.14 308a9.64 9.64 0 0 0 10.55 11.2l87.31-9.63a194 194 0 0 0 1.19 19.7a19.53 19.53 0 0 0 5.7 12L170.7 375a19.6 19.6 0 0 0 12 5.7a194 194 0 0 0 19.59 1.19l-9.58 87.2a9.65 9.65 0 0 0 11.2 10.55c26.81-4.3 89.36-20.13 113.15-74.5c8.4-19.27 10.12-41.77 8.18-64.27a317.7 317.7 0 0 0 42.21-35.64C441 232.05 491.74 99.74 477.64 38.26M294.07 217.93a48 48 0 1 1 67.86 0a47.95 47.95 0 0 1-67.86 0"/><path fill="currentColor" d="M168.4 399.43c-5.48 5.49-14.27 7.63-24.85 9.46c-23.77 4.05-44.76-16.49-40.49-40.52c1.63-9.11 6.45-21.88 9.45-24.88a4.37 4.37 0 0 0-3.65-7.45a60 60 0 0 0-35.13 17.12C50.22 376.69 48 464 48 464s87.36-2.22 110.87-25.75A59.7 59.7 0 0 0 176 403.09c.37-4.18-4.72-6.67-7.6-3.66"/></svg>
             </span>
     
-            <p class="mt-6">Transforming ideas into digital reality</p>
+            <p class="sm:mt-6 mb-3">Transforming ideas into digital reality</p>
         </div>
     
         <div class="flex gap-3">
-            <span class="border w-15 h-15 p-3 rounded-full ml-11">
+            <span class="border w-10 h-10 sm:w-15 sm:h-15 p-3 rounded-full ml-11">
                 <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 32 32"><path fill="currentColor" d="M29.502 3.415a3.56 3.56 0 0 0-4.974-.09L11.043 16.032l-.014-.002l-2.129 2.1a2 2 0 0 0-.389.538a3.98 3.98 0 0 0-2.365.683A4.91 4.91 0 0 0 3.7 23.559a2.67 2.67 0 0 1-.7 1.925l-.789.739l-.059.324a1.473 1.473 0 0 0 1.023 1.677l2.579.783l.5.1q.623.115 1.257.115a7.02 7.02 0 0 0 5.39-2.527c.574-.684.9-1.539.93-2.426c.25-.095.486-.244.69-.444l.798-.788l.015.03L29.527 8.39a3.56 3.56 0 0 0-.025-4.974m-14.608 17.23l-2.81-2.846L25.9 4.78a1.559 1.559 0 0 1 2.19 2.218zm-8.28 6.496l-.33-.061L4.7 26.6a4.9 4.9 0 0 0 .988-2.813a2.99 2.99 0 0 1 1.546-2.758a2 2 0 0 1 2.559.232l1.454 1.459a2 2 0 0 1 .117 2.694a5.02 5.02 0 0 1-4.75 1.727"/></svg>
             </span>
     
-            <p class="mt-4">Creating elegant and responsive designs</p>
+            <p class="sm:mt-4 mb-3">Creating elegant and responsive designs</p>
     
         </div>
     
         <div class="flex gap-3">
-            <span class="border p-2 w-13 h-13 rounded-full sm:ml-21">
+            <span class="border p-2 w-8 h-8 sm:w-13 sm:h-13 rounded-full sm:ml-21">
                 <svg class="text-center justify-center items-center mx-auto" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24"><path fill="currentColor" d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5z"><animateTransform attributeName="transform" attributeType="XML" dur="10s" from="0 12 12" repeatCount="indefinite" to="360 12 12" type="rotate"/></path></svg>
             </span>
     
-        <p class="mt-4">Building robust and scalable solutions</p>
+        <p class="sm:mt-4">Building robust and scalable solutions</p>
         
         </div>
     </div>
@@ -191,7 +190,7 @@
  </section>
 
  <!-- ABOUT ME -->
- <section id="about" class="p-6 place-self-center">
+ <section id="about" class="p-3 justify-center items-center mx-auto ">
     <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center">
 
         <h1>About me</h1>
@@ -214,13 +213,13 @@
         
     </div>
 
-    <div class="relative w-[500px] lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
+    <div class="relative sm:w-[500px] w-full lg:mt-0 mx-auto mt-4 group min-h-screen flex items-center">
         {#if !showMenu}
-        <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="">
+        <img class="rounded-lg transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
     
         <!-- about text -->
-        <div class="absolute inset-0 flex justify-center items-center p-4 bg-black opacity-60">
-            <p class="aboutMe bg-black text-xl font-bold">
+        <div class="absolute inset-0 justify-center p-2 rounded-lg shadow-lg shadow-green-500 items-center bg-black opacity-60">
+            <p class="aboutMe bg-black text-lg sm:text-xl font-bold">
                 Hey there! My name is Josiah Andrew, a passionate Full-Stack Web Developer with a keen eye for detail and a commitment to creating efficient, scalable, and user-friendly applications. Born on January 12, 2008, I have always been fascinated by technology and its ability to solve real-world problems. My journey into web development has equipped me with expertise in both frontend and backend technologies, allowing me to build seamless digital experiences. I am constantly learning and evolving, staying up to date with the latest industry trends to refine my skills. My goal is to create impactful solutions that not only meet business needs but also enhance user experiences. <br>
                 <span class="font-extrabold text-green-600 mt-3">Let’s build something incredible together!!</span>
             </p> 
