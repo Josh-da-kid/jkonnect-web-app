@@ -1,63 +1,60 @@
-<script lang='ts'>
-import { onMount } from 'svelte';
-       let showMenu = false;
-       let showOverlay = true;
+<script lang="ts">
+    import { onMount } from 'svelte';
+    let showMenu = false;
+    let showOverlay = true;
     
+    // Audio controls
+    let isPlaying: boolean = true; // Default: Sound is ON
+    let currentSongIndex: number = 0;
+    let audio: HTMLAudioElement | null = null;
     
     // List of songs
+    const songs: string[] = [
+        '/yvSG60yjYQoz.128.mp3',
+        '/R2k83VTIyoPd.128.mp3',
+        '/I9xUTg6dvvUg.128.mp3'
+    ];
     
-    let isPlaying: boolean = true; // Default: Sound is ON
-        let audio: HTMLAudioElement | null = null; // Explicitly typed
-        let currentSongIndex: number = 0;
-    
-        // List of songs (Replace with actual paths)
-        const songs: string[] = [
-            '/yvSG60yjYQoz.128.mp3',
-            '/R2k83VTIyoPd.128.mp3',
-            '/I9xUTg6dvvUg.128.mp3'
-        ];
-    
-        // Function to play the next song
-        function playNextSong() {
-            if (!audio) return;
-            currentSongIndex = (currentSongIndex + 1) % songs.length;
-            audio.src = songs[currentSongIndex];
-            if (isPlaying) audio.play();
-        }
-    
-        // Toggle sound ON/OFF
-        function toggleSound() {
-            if (!audio) return;
-            if (isPlaying) {
-                audio.pause();
-            } else {
-                audio.play();
-            }
-            isPlaying = !isPlaying;
-        }
-    
-        // Initialize audio on component mount
-        onMount(() => {
-    audio = document.getElementById("audioPlayer") as HTMLAudioElement;
-
-    if (audio) {
-        audio.muted = true; // Ensure it starts muted
-        audio.play().then(() => {
-            console.log("Autoplay started");
-        }).catch(error => {
-            console.error("Autoplay blocked:", error);
-        });
+    // Function to play the next song
+    function playNextSong() {
+        if (!audio) return;
+        currentSongIndex = (currentSongIndex + 1) % songs.length; // Loop after last song
+        audio.src = songs[currentSongIndex];
+        audio.load(); // Load the new song
+        if (isPlaying) audio.play();
     }
-});
-
-function unmuteAudio() {
-    if (audio) {
-        audio.muted = false; // Unmute when user interacts
-        audio.play();
+    
+    // Toggle sound ON/OFF
+    function toggleSound() {
+        if (!audio) return;
+        if (isPlaying) {
+            audio.pause();
+        } else {
+            audio.play();
+        }
+        isPlaying = !isPlaying;
     }
-}
+    
+    // Unmute audio (for user interaction)
+    function unmuteAudio() {
+        if (audio) {
+            audio.muted = false;
+            audio.play();
+            isPlaying=true;
+        }
+    }
+    
+    // Initialize audio on component mount
+    onMount(() => {
+        audio = new Audio(songs[currentSongIndex]); // Create audio element
+        audio.muted = true; // Start muted
+        audio.loop = false; // Disable looping to handle song transitions
+    
+        // Play next song when current song ends
+        audio.addEventListener("ended", playNextSong);
+    });
     </script>
-
+    
 <!-- Header Section -->
  
  <section class="bg-black fixed w-full left-0 right-0 bg-opacity-80 mt-0 shadow-lg top-0 z-100 mb-5">
@@ -129,7 +126,7 @@ function unmuteAudio() {
         </div>
         {/if}
  
-<!-- Overlay to show button on top of everything -->
+<!-- Overlay to show VIEW PORTFOLIO button on top of everything -->
 {#if showOverlay}
 <div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
     <div class="text-center justify-center items-center space-y-4">
@@ -621,9 +618,7 @@ function unmuteAudio() {
     </div>
 
 
-<audio id="audioPlayer" autoplay muted loop>
-    <source src="/yvSG60yjYQoz.128.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
+<audio id="audioPlayer">
 </audio> <!-- Hidden audio element -->
 
 <footer class="text-center mt-8">© 2025 by Ubana Josiah</footer>
