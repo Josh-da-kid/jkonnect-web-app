@@ -1,8 +1,7 @@
-
 <script lang='ts'>
-
-    import { onMount } from 'svelte';
+import { onMount } from 'svelte';
        let showMenu = false;
+       let showOverlay = true;
     
     
     // List of songs
@@ -39,29 +38,36 @@
     
         // Initialize audio on component mount
         onMount(() => {
-            audio = new Audio(songs[currentSongIndex]);
-            audio.play();
-            audio.addEventListener('ended', playNextSong);
+    audio = document.getElementById("audioPlayer") as HTMLAudioElement;
 
-            window.addEventListener("DOMContentLoaded", () => {
-    const audio = document.getElementById("audioPlayer") as HTMLAudioElement | null;
-    
     if (audio) {
-        audio.play().catch(error => console.error("Autoplay blocked:", error));
+        audio.muted = true; // Ensure it starts muted
+        audio.play().then(() => {
+            console.log("Autoplay started");
+        }).catch(error => {
+            console.error("Autoplay blocked:", error);
+        });
     }
 });
 
-
-        })
+function unmuteAudio() {
+    if (audio) {
+        audio.muted = false; // Unmute when user interacts
+        audio.play();
+    }
+}
     </script>
 
 
 
 
 <!-- Header Section -->
+ 
  <section class="bg-black fixed w-full left-0 right-0 bg-opacity-80 mt-0 shadow-lg top-0 z-100 mb-5">
 
+   
      <div class="flex mx-auto text-white justify-between p-5 px-6">
+        {#if !showOverlay}
          <div class="ml-2">
              <h1 class="text-2xl" ><span class="text-green-500 text-3xl font-bold ">J</span><span class="mr-2">osiah's</span><span class="text-green-500">P</span>ortfolio</h1>
          </div>
@@ -76,6 +82,7 @@
                  <li class="hover:text-green-400 cursor-pointer"><a href="#contact">Contact</a></li>
              </ul>
          </div>
+         
 
          <!-- HAMBURGER MENU -->
           {#if !showMenu}
@@ -96,6 +103,7 @@
                     <svg class="hover:text-red-500 text-white ml-6" id="x" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243"/></svg>
                 </button>   
             </div>
+            {/if}
             {/if}
                     
      </div>
@@ -120,6 +128,25 @@
         </div>
         {/if}
  
+<!-- Overlay to show button on top of everything -->
+{#if showOverlay}
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
+    <div class="text-center justify-center items-center space-y-4">
+        <div class="flex text-center justify-center items-center gap-3">
+
+            <span class="text-3xl font-bold">Built with</span>
+            <span><img class="h-20 w-20" src="/svelte-icon-1703x2048-c1sw8yt9.png" alt=""></span>
+        </div>
+        <button on:click={() => {
+            unmuteAudio()
+            showOverlay = false
+        }} class="bg-green-600 text-white px-6 py-3 rounded-full shadow-lg text-xl hover:bg-green-700">
+             View Portfolio
+        </button>
+    </div>
+</div>
+{/if}
+
 
 <!-- Body -->
  <section id="home" class="mt-32 sm:mt-24 text-white">
@@ -133,6 +160,7 @@
            
     <p class="flex text-center mt-3">Welcome to my Creative Space</p>
 </div>
+
 
 <div class="m-4 mt-8 flex gap-2 text-center justify-center border-gray-700 hover:bg-gray-800 hover:text-green-500 cursor-pointer border p-3 rounded-full w-[200px]">
 
@@ -537,6 +565,9 @@
     </div>
 
 
-<audio id="audioPlayer" autoplay ></audio> <!-- Hidden audio element -->
+<audio id="audioPlayer" autoplay muted loop>
+    <source src="/yvSG60yjYQoz.128.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+</audio> <!-- Hidden audio element -->
 
-   
+ 
