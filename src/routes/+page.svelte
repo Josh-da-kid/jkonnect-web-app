@@ -146,7 +146,7 @@ function unmuteAudio() {
 
 
 <!-- Body -->
- <section id="home" class="mt-32 sm:mt-24 text-white">
+ <section id="home" class="mt-32 sm:mt-24 text-white sm:pt-15 min-h-screen h-auto mx-auto">
     
 <div class="text-white font-bold rounded-full w-[350px] sm:m-12 m-4 p-4 flex gap-2 border focus-none border-gray-700">
     
@@ -275,7 +275,7 @@ function unmuteAudio() {
   </section>
 
  <!-- MY FEATURED PROJECTS -->
-  <section id="projects" class="justify-center items-center place-self-center">
+  <section id="projects" class="justify-center items-center place-self-center py-20">
     <div class="text-4xl sm:text-5xl md:text-6xl text-center mt-21 items-center justify-center">
 
         <h1>Featured Projects</h1>
@@ -353,8 +353,8 @@ function unmuteAudio() {
   </section>
 
   <!-- SKILLS -->
-<section id="skills">
-    <div class="text-4xl sm:text-5xl md:text-6xl items-center p-8">
+<section id="skills" class="py-25">
+    <div class="text-4xl sm:text-5xl md:text-6xl items-center">
         <h1 class="text-center">Tech Skills</h1>
 
         <div class="flex justify-center items-center h-full w-full text-4xl">
@@ -380,7 +380,7 @@ function unmuteAudio() {
 </section>
 
 <!-- SERVICES -->
-<section id="services">
+<section id="services" class="py-20">
 
     <div class="text-4xl sm:text-5xl md:text-6xl items-center p-5 w-full h-full">
         <h1 class="text-center">Services I offer</h1>
