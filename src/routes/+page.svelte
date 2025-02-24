@@ -264,7 +264,7 @@ function unmuteAudio() {
 
     <div class="relative sm:w-[500px] w-full lg:mt-0 mx-auto mt-4 group flex items-center">
         {#if !showMenu}
-        <img class=" transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
+        <img class="hidden sm:flex transition-all duration-300 ease-in-out" src="/WhatsApp Image 2024-12-25 at 12.24.20 PM.jpeg" alt="about me info">
     
         <!-- about text -->
         <div class="sm:absolute inset-0 justify-center p-1 sm:p-3 shadow-lg shadow-green-500 items-center bg-black opacity-60">
