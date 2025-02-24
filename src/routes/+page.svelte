@@ -575,4 +575,5 @@ function unmuteAudio() {
         Your browser does not support the audio element.
 </audio> <!-- Hidden audio element -->
 
+<footer class="text-center mt-8">© 2025 by Ubana Joshua</footer>
  
