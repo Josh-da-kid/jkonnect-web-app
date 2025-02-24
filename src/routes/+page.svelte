@@ -71,7 +71,10 @@ function unmuteAudio() {
 
          <div class="mr-10 hidden sm:flex sm:mr-0 md:mr- sm:mt-2">
              <ul class="flex gap-12">
-                <li class="hover:text-green-400 cursor-pointer ml-3"><a href="#home">Home</a></li>
+               <li
+                class="cursor-pointer ml-3 bg-green-700 hover:bg-green-800 rounded-lg hover:text-gray-200"><a href="#hire" class="p-4">HIRE ME</a>
+            </li> 
+                <li class="hover:text-green-400 cursor-pointer"><a href="#home">Home</a></li>
                  <li class="hover:text-green-400 cursor-pointer"><a href="#about">About</a></li>
                  <li class="hover:text-green-400 cursor-pointer"><a href="#projects">Projects</a></li>
                  <li class="hover:text-green-400 cursor-pointer"><a href="#skills">Skills</a></li>
@@ -114,7 +117,8 @@ function unmuteAudio() {
 
         <div class="mr-10 space-y-6" >
             
-              <p class="cursor-pointer ml-3 mt-32"><a on:click={() => showMenu = false} class="hover:text-green-400" href="#home">Home</a></p>
+            <button class="cursor-pointer ml-3 bg-green-700 hover:bg-green-800 p-3 rounded-lg mt-32"><a on:click={() => showMenu = false} class="hover:text-gray-200" href="#hire">HIRE ME</a></button>
+              <p class="cursor-pointer ml-3"><a on:click={() => showMenu = false} class="hover:text-green-400" href="#home">Home</a></p>
                 <p class="cursor-pointer"><a on:click={() => showMenu = false} class="hover:text-green-400 " href="#about">About</a></p>
                 <p class="cursor-pointer"><a  on:click={() => showMenu = false} class="hover:text-green-400 " href="#projects">Projects</a></p>
                 <p class="cursor-pointer"><a  on:click={() => showMenu = false} class="hover:text-green-400 " href="#skills">Skills</a></p>
@@ -499,6 +503,53 @@ function unmuteAudio() {
 
 </section>
 
+<!-- HIRE ME -->
+<section id="hire">
+    <div class="text-4xl sm:text-5xl md:text-6xl items-center py-20 w-full h-full">
+        <h1 class="text-center">Hire me</h1>
+
+        <div class="flex justify-center items-center h-full w-full text-4xl">
+            <svg class="h-8" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                <circle cx="18" cy="12" r="0" fill="#78d65c">
+                    <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
+                </circle>
+                <circle cx="12" cy="12" r="0" fill="#78d65c">
+                    <animate attributeName="r" begin=".33" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
+                </circle>
+                <circle cx="6" cy="12" r="0" fill="#78d65c">
+                    <animate attributeName="r" begin="0" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;2;0;0"/>
+                </circle>
+            </svg>
+        </div>
+
+        <form action="https://formsubmit.co/carmenjosh84@gmail.com" method="POST" class="max-w-lg mx-auto bg-gray-800 p-6 rounded-lg shadow-lg text-sm  border border-green-500 shadow-green-500">
+            <h2 class="text-2xl font-bold text-center mb-4">Contact Me</h2>
+            
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+                <input type="text" name="name" id="name" required
+                    class="mt-1 w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-700 text-white">
+            </div>
+        
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-300">Email</label>
+                <input type="email" name="email" id="email" required
+                    class="mt-1 w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-700 text-white">
+            </div>
+        
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-300">Message</label>
+                <textarea name="message" id="message" rows="4" required
+                    class="mt-1 w-full px-4 py-2 rounded-md bg-gray-900 border border-gray-700 text-white"></textarea>
+            </div>
+        
+            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-md">
+                Send Message
+            </button>
+        </form>
+        
+</section>
+
 <!-- CONTACT ME -->
 <section id="contact" class="p-8 text-center items-center justify-center mx-auto">
     <div class="text-4xl sm:text-5xl md:text-6xl items-center justify-center mx-auto flex">
@@ -575,5 +626,5 @@ function unmuteAudio() {
         Your browser does not support the audio element.
 </audio> <!-- Hidden audio element -->
 
-<footer class="text-center mt-8">© 2025 by Ubana Joshua</footer>
+<footer class="text-center mt-8">© 2025 by Ubana Josiah</footer>
  
