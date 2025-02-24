@@ -137,7 +137,7 @@ function unmuteAudio() {
             <span class="text-3xl font-bold">Built with</span>
             <span><img class="h-20 w-20" src="/svelte-icon-1703x2048-c1sw8yt9.png" alt=""></span>
         </div>
-        <button on:click={() => {
+        <button id="viewBtn" on:click={() => {
             unmuteAudio()
             showOverlay = false
         }} class="bg-green-600 text-white px-6 py-3 rounded-full shadow-lg text-xl hover:bg-green-700">
@@ -182,13 +182,21 @@ function unmuteAudio() {
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script>
-    let typed = new Typed(".animate-typing",{
-        strings: ["Josiah Andrew", "a web developer", "a Full-stack developer"],
-        typeSpeed: 160,
-        backSpeed:150,
-        looped: true
-    })
+  // Wait for the user to click the button
+  document.getElementById("viewBtn").addEventListener("click", function() {
+    // Hide the overlay
+    
+    
+    // Initialize Typed.js only after the overlay is dismissed
+    let typing = new Typed(".animate-typing", {
+      strings: ["Josiah Andrew", "a web developer", "a Full-stack developer"],
+      typeSpeed: 160,
+      backSpeed: 150,
+      loop: true
+    });
+  });
 </script>
+
 
 <div class="ml-6 mt-8 font-mono lg:flex justify-between">
 
