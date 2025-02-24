@@ -136,9 +136,15 @@
 
 <div class="m-4 mt-8 flex gap-2 text-center justify-center border-gray-700 hover:bg-gray-800 hover:text-green-500 cursor-pointer border p-3 rounded-full w-[200px]">
 
-<span></span>
+    <a class="flex" href="/" download>
 
-    <p >DOWNLOAD CV</p>
+        <span class="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="m12 15.577l-3.539-3.538l.708-.72L11.5 13.65V5h1v8.65l2.33-2.33l.709.719zM6.616 19q-.691 0-1.153-.462T5 17.384v-2.423h1v2.423q0 .231.192.424t.423.192h10.77q.23 0 .423-.192t.192-.424v-2.423h1v2.423q0 .691-.462 1.153T17.384 19z"/></svg>
+        </span>
+        
+            <span>DOWNLOAD CV</span>
+
+    </a>
 </div>
 
 <div class="sm:text-5xl text-4xl md:text-6xl mt-12 ml-6 text-gray-300">
